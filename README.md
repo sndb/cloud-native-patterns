@@ -8,6 +8,7 @@ To-Do:
     - [ ] Debounce
     - [ ] Retry
     - [ ] Throttle
+    - [ ] Load Shedding
     - [ ] Timeout
 
 - Concurrency Patterns
