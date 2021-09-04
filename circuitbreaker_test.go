@@ -10,11 +10,12 @@ import (
 	"time"
 )
 
-func TestCircuitBreaker(t *testing.T) {
+func getResettingCounter() Circuit {
 	var timer *time.Timer
 	var total, i int
 	var mu sync.Mutex
-	e := Breaker(func(ctx context.Context) (string, error) {
+
+	return func(ctx context.Context) (string, error) {
 		mu.Lock()
 		defer mu.Unlock()
 
@@ -31,21 +32,24 @@ func TestCircuitBreaker(t *testing.T) {
 			return "", errors.New("please wait")
 		}
 		i++
-		return "success", nil
-	}, 3)
+		return fmt.Sprint(total), nil
+	}
+}
 
+func TestCircuitBreaker(t *testing.T) {
+	e := Breaker(getResettingCounter(), 3)
 	for i := 0; i < 100; i++ {
 		e(context.Background())
 	}
-
 	time.Sleep(time.Second * 3)
 
-	if total != 6 {
-		t.Errorf("total == %d, want %d", total, 6)
+	total, _ := e(context.Background())
+	if total != "7" {
+		t.Errorf("total == %s, want %s", total, "7")
 	}
-	e(context.Background())
-	if total != 7 {
-		t.Errorf("total == %d, want %d", total, 7)
+	total, _ = e(context.Background())
+	if total != "8" {
+		t.Errorf("total == %s, want %s", total, "8")
 	}
 }
 
