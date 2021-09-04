@@ -6,9 +6,7 @@ import (
 	"time"
 )
 
-type Effector func(context.Context) (string, error)
-
-func Debounce(e Effector, threshold time.Duration) Effector {
+func Debounce(e Circuit, threshold time.Duration) Circuit {
 	var r string
 	var err error
 	var last time.Time

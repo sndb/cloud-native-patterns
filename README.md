@@ -5,7 +5,7 @@ To-Do:
 - Stability Patterns
     - [X] Circuit Breaker
         - [ ] Jitter Variation
-    - [ ] Debounce
+    - [X] Debounce
     - [ ] Retry
     - [ ] Throttle
     - [ ] Load Shedding
