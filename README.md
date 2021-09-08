@@ -6,7 +6,7 @@ To-Do:
     - [X] Circuit Breaker
         - [ ] Jitter Variation
     - [X] Debounce
-    - [ ] Retry
+    - [X] Retry
     - [ ] Throttle
     - [ ] Load Shedding
     - [ ] Timeout

@@ -7,8 +7,6 @@ import (
 	"time"
 )
 
-type Circuit func(context.Context) (string, error)
-
 func Breaker(c Circuit, threshold int) Circuit {
 	remaining := threshold
 	var last time.Time

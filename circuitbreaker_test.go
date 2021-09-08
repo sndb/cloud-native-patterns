@@ -54,7 +54,7 @@ func TestCircuitBreaker(t *testing.T) {
 }
 
 func failAfter(threshold int) Circuit {
-	count := 0
+	var count int
 
 	return func(ctx context.Context) (string, error) {
 		count++
