@@ -7,7 +7,7 @@ To-Do:
         - [ ] Jitter Variation
     - [X] Debounce
     - [X] Retry
-    - [ ] Throttle
+    - [X] Throttle
     - [ ] Load Shedding
     - [ ] Timeout
 
