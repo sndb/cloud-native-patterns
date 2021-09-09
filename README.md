@@ -8,7 +8,7 @@ To-Do:
     - [X] Retry
     - [X] Throttle
     - [X] Timeout
-    - [ ] Load Shedding
+    - [X] Load Shedding
     - [X] Jitter Backoff
 
 - Concurrency Patterns
