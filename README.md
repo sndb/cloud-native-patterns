@@ -4,12 +4,12 @@ To-Do:
 
 - Stability Patterns
     - [X] Circuit Breaker
-        - [ ] Jitter Variation
     - [X] Debounce
     - [X] Retry
     - [X] Throttle
-    - [ ] Load Shedding
     - [ ] Timeout
+    - [ ] Load Shedding
+    - [X] Jitter Backoff
 
 - Concurrency Patterns
     - [X] Fan-In
