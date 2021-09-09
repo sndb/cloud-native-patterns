@@ -14,5 +14,5 @@ To-Do:
 - Concurrency Patterns
     - [X] Fan-In
     - [X] Fan-Out
-    - [ ] Future
+    - [X] Future
     - [ ] Sharding
