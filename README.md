@@ -12,7 +12,7 @@ To-Do:
     - [ ] Timeout
 
 - Concurrency Patterns
-    - [ ] Fan-In
-    - [ ] Fan-Out
+    - [X] Fan-In
+    - [X] Fan-Out
     - [ ] Future
     - [ ] Sharding
